@@ -29,6 +29,19 @@ For a successful MQTT communication you need:
 For info on howto install software on the Publisher device and more info about the used Broker device see [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main)
 
 Instructions to install and setup the Raspberry Sense Hat V2 see [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html).
+Especial pay attention to these steps:
+```
+Before you can read and write EEPROM data to and from the Sense HAT, you must complete the following steps:
+
+Enable I2C0 and I2C1 by adding the following line to the /boot/firmware/config.txt file:
+
+dtparam=i2c_vc=on
+dtparam=i2c_arm=on
+Run the following command to reboot:
+
+sudo reboot
+
+```
 
 ### for the Subscriber device
 
