@@ -125,13 +125,13 @@ Average of ext tph sensor and sense hat tph sensor: temp:  32.44, pres: 1004.56,
 [...] or after the gotosleep time moment:
 rotate_log_if_needed(): size of "mqtt_log_2025-07-27T231001.txt" is: 29294 bytes. Max size is: 51200 bytes.
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
-MQTT  21:58:16
+MQTT  00:41:16
 Feather PC-Lab BME280
-msgID: 1753739896
-Temperature: 30.2 °C
-Pressure: 1002.2 mB
-Altitude:  92.7 m
-Humidity:  38.1 %
+msgID: 1753749676
+Temperature: 30.6 °C
+Pressure: 1001.9 mB
+Altitude:  94.9 m
+Humidity:  38.6 %
 draw(): it is night. We're not showing data on the LED matrix of the sense hat
 -----------------------------------------------------------------------------------------------------------
 [...]
