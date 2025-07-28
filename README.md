@@ -14,9 +14,6 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 ## MQTT messages come by "topics".
 ### This repo works with four different topics for the Publisher device and six topics for the Subscriber device:
 - "sensor/Feath/ambient". Containing ambient data from a remote sensor
-- "lights/Feath/toggle". Containing a lights toggle command from a remote controller
-- "ligths/Feath/color_inc". Containing a lights color increase command from a remote controller
-- "lights/Feath/color_dec". Containing a lights color decrease command from a remote controller
 - "$SYS/broker/clients/disconnected". Subscriber device only. 
 - "$SYS/broker/clients/connected". Subscriber device only.
 
