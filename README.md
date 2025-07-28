@@ -12,7 +12,7 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 - Using ambient data: temperatrue, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
 
 ## MQTT messages come by "topics".
-### This repo works with four different topics for the Publisher device and six topics for the Subscriber device:
+### This repo works with six different topics for the Publisher device and three topics for this Subscriber device:
 - "sensor/Feath/ambient". Containing ambient data from a remote sensor
 - "$SYS/broker/clients/disconnected". Subscriber device only. 
 - "$SYS/broker/clients/connected". Subscriber device only.
