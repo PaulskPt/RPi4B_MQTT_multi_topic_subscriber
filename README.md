@@ -63,7 +63,7 @@ Before to start the Python script ```mqtt_rpi4b.py``` you need to start a termin
 As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
 ```
 
-(env) paulsk@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
+(env) <user>@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
 file: "sys_broker.json" has been reset.
 global(): we are using the Raspberry Pi sense Hat
 global(): using average tph values
