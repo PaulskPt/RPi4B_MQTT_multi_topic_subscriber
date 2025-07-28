@@ -1,0 +1,317 @@
+Monday 2025-07-28 12h35 utc +1
+Board: RPi4B + Sense HAT V2
+
+From the documentation :
+
+I executed these commands on the RPi4B:
+
+Download and build the flash tool:
+
+git clone https://github.com/raspberrypi/hats.git
+cd hats/eepromutils
+make
+
+To read EEPROM data, run the following command:
+
+sudo ./eepflash.sh -f=sense_read.eep -t=24c32 -r
+
+I got the following errors:
+
+
+
+paulsk@RPi4B:~/hats/eepromutils $ sudo ./eepflash.sh -f=sense_read.eep -t=24c32 -r
+This will attempt to talk to an eeprom at i2c address 0x50. Make sure there is an eeprom at this address.
+This script comes with ABSOLUTELY no warranty. Continue only if you know what you are doing.
+Do you wish to continue? (yes/no): yes
+./eepflash.sh: 159: cannot create /sys/class/i2c-adapter/i2c-9/new_device: Directory nonexistent
+Reading...
+dd: falha ao abrir '/sys/class/i2c-adapter/i2c-9/9-0050/eeprom': Ficheiro ou pasta inexistente
+Closing EEPROM Device.
+./eepflash.sh: 187: cannot create /sys/class/i2c-adapter/i2c-9/delete_device: Directory nonexistent
+Error doing I/O operation.
+
+
+Error probably because I did not (yet) modify the file /boot/firmware/config.txt
+
+Next I added the two lines to file /boot/firmware/config.txt.
+Then I rebooted the RPi4B.
+Next entered the folder ~/hats/eepromutils. 
+Then I read the README.md. I executed the "make install". See below:
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=108134
+
+## Usage
+
+1. Create tools with `make && sudo make install`
+        Tools available:
+        * `eepmake`: Parses EEPROM text file and creates binary `.eep` file
+        * `eepdump`: Dumps a binary .eep file as human readable text (for debug)
+        * `eepflash`: Write or read .eep binary image to/from HAT EEPROM
+
+2. Edit `eeprom_setting.txt` to suit your specific HAT.
+
+3. Run `./eepmake eeprom_settings.txt eeprom.eep` to create the eep binary
+
+#### On the Raspberry Pi
+0. create tools with `make && sudo make install` (If you did the previous steps on your Pi, you don't need to do this).
+1. Disable EEPROM write protection
+        * Sometimes this requires a jumper on the board
+        * Sometimes this is a GPIO
+        * Check your schematics
+2. Make sure you can talk to the EEPROM
+        * In the HAT specification, the HAT EEPROM is connected to pins that can be driven by I2C0.
+          However, this is the same interface as used by the camera and displays, so use of it by the ARMs is discouraged.
+          The `eepflash.sh` script gets around this problem by instantiating a software driven I2C interface using those
+          pins as GPIOs, calling it `i2c-9`:
+        ```
+           sudo dtoverlay i2c-gpio i2c_gpio_sda=0 i2c_gpio_scl=1 bus=9
+        ```
+        * Install i2cdetect `sudo apt install i2c-tools`
+        * Check with `i2cdetect -y 9` (should be at address 0x50)
+        ```bash
+           i2cdetect -y 9 0x50 0x50
+               0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+           00:
+           10:
+           20:
+paulsk@RPi4B:~/hats/eepromutils $ sudo make install
+install -d /usr/local/sbin
+install -d /usr/local/bin
+install eepmake /usr/local/bin/
+install eepdump /usr/local/bin/
+install eepflash.sh /usr/local/sbin/
+
+
+Then I executed the needed steps to be able to Write to the EEPROM of the Sense HAT V2:
+
+
+paulsk@RPi4B:~ $ wget https://github.com/raspberrypi/rpi-sense/raw/master/eeprom/eeprom_settings.txt -O sense_eeprom.txt
+./eepmake sense_eeprom.txt sense.eep /boot/firmware/overlays/rpi-sense-overlay.dtb
+--2025-07-28 12:54:18--  https://github.com/raspberrypi/rpi-sense/raw/master/eeprom/eeprom_settings.txt
+A resolver github.com (github.com)... 140.82.121.3
+A ligar a github.com (github.com)|140.82.121.3|:443... ligado.
+Pedido HTTP enviado, a aguardar resposta... 302 Found
+Localização: https://raw.githubusercontent.com/raspberrypi/rpi-sense/master/eeprom/eeprom_settings.txt [a seguir]
+--2025-07-28 12:54:19--  https://raw.githubusercontent.com/raspberrypi/rpi-sense/master/eeprom/eeprom_settings.txt
+A resolver raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8002::154, 2606:50c0:8003::154, 2606:50c0:8001::154, ...
+A ligar a raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8002::154|:443... ligado.
+Pedido HTTP enviado, a aguardar resposta... 200 OK
+Tamanho: 3056 (3,0K) [text/plain]
+A gravar em: "sense_eeprom.txt"
+
+sense_eeprom.txt                          100%[====================================================================================>]   2,98K  --.-KB/s    em 0s
+
+2025-07-28 12:54:19 (7,05 MB/s) - "sense_eeprom.txt" gravado [3056/3056]
+
+-bash: ./eepmake: Ficheiro ou pasta inexistente
+
+I moved the file sense_eeprom.txt from the ~/ to ~/hats/eepromutils.
+
+--------------------------------------------
+At 13h17 utc +1 I executed the datalogger.py example. The execution failed with this error:
+
+
+paulsk@RPi4B:~ $ source env/bin/activate
+(env) paulsk@RPi4B:~ $ cd env/mqtt
+(env) paulsk@RPi4B:~/env/mqtt $ ls -al
+total 252
+drwxrwxrw- 2 paulsk paulsk  4096 jul 28 13:07 .
+drwxr-xr-x 6 paulsk paulsk  4096 jul 26 23:04 ..
+-rw-r--r-- 1 paulsk paulsk  1885 jul  3 16:45 datalogger.py
+-rw-r--r-- 1 paulsk paulsk  2056 jul  3 16:45 datalogger_with_delay.py
+-rw-r--r-- 1 paulsk paulsk     0 jul 27 00:14 err_log.txt
+-rw-r--r-- 1 paulsk paulsk    30 jul 27 23:10 mqtt_latest_log_fn.txt
+-rw-r--r-- 1 paulsk paulsk 51706 jul 27 23:14 mqtt_log_2025-07-27T001713.txt
+-rw-r--r-- 1 paulsk paulsk  4842 jul 28 12:43 mqtt_log_2025-07-27T231001.txt
+-rwxrw-rw- 1 paulsk paulsk 75900 jul 27 20:53 mqtt_presto_v3.py
+-rwxrw-rw- 1 paulsk paulsk 66226 jul 28 12:43 mqtt_rpi4b.py
+-rw-r--r-- 1 paulsk paulsk  7443 jul 26 19:54 raspi-blinka.py
+-rw-r--r-- 1 paulsk paulsk  6291 jul 26 20:00 raspi-spi-reassign.py
+-rwxrw-rw- 1 paulsk paulsk   710 jul 28 11:24 secrets.json
+-rwxrw-rw- 1 paulsk paulsk    18 jul 28 12:12 sys_broker.json
+(env) paulsk@RPi4B:~/env/mqtt $ python3 datalogger.py
+Traceback (most recent call last):
+  File "/home/paulsk/env/mqtt/datalogger.py", line 6, in <module>
+    sense.color.gain = 60
+    ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/sense_hat/colour.py", line 344, in gain
+    raise InvalidGainError(gain=gain, values=self.interface.GAIN_VALUES)
+sense_hat.exceptions.InvalidGainError: Cannot set gain to '60'. Values: (1, 4, 16, 64)
+
+The same error was in the example: datalogger_with_delay.py.
+I corrected also that error.
+Then I added code to print the values of temperature, pressure and humidity to the serial port output.
+Below the output:
+
+(env) paulsk@RPi4B:~/env/mqtt $ python3 datalogger_with_delay.py
+temp:  33.71, pres: 1008.63, humi:  41.02
+temp:  33.71, pres: 1008.63, humi:  40.21
+temp:  33.71, pres: 1008.65, humi:  40.87
+temp:  33.80, pres: 1008.65, humi:  39.69
+temp:  33.82, pres: 1008.65, humi:  41.32
+temp:  33.76, pres: 1008.63, humi:  40.52
+temp:  33.88, pres: 1008.61, humi:  40.27
+temp:  33.76, pres: 1008.67, humi:  40.08
+temp:  33.65, pres: 1008.66, humi:  40.26
+temp:  33.78, pres: 1008.65, humi:  40.23
+temp:  33.82, pres: 1008.62, humi:  39.99
+temp:  33.84, pres: 1008.65, humi:  40.52
+temp:  33.82, pres: 1008.65, humi:  39.90
+
+
+-------------------------------------
+
+Output of python script: env/mqtt/mqtt_rpi4b.py 
+after additions to get the temperature, pressure and humidity values from the sense hat tph sensor:
+After seeing the first values, I came up with the idea to calculate and print to serial output the 
+average values of the external (mqtt received sensor data) tph sensor and the tph data from the sense hat.
+
+
+ext tph sensor data: temp:  30.40, pres: 1003.60, humi:  38.80
+Sense HAT tph data:  temp:  34.27, pres: 1008.39, humi:  40.22
+Average of ext tph sensor and sense hat tph sensor: temp:  32.34, pres: 1006.00, humi:  39.51
+
+
+----------------------
+ext tph sensor data:                                temp:  30.40, pres: 1003.50, humi:  39.00
+Sense HAT tph data:                                 temp:  35.52, pres: 1008.28, humi:  38.07
+Average of ext tph sensor and sense hat tph sensor: temp:  32.96, pres: 1005.89, humi:  38.53
+
+
+----------------------
+ext tph sensor data...............................: temp:  30.40, pres: 1003.40, humi:  39.10
+Sense HAT tph data................................: temp:  35.16, pres: 1008.21, humi:  38.15
+Average of ext tph sensor and sense hat tph sensor: temp:  32.78, pres: 1005.81, humi:  38.62
+
+----------------------
+Data now better aligned:
+
+ext tph sensor data...............................: temp:  30.40, pres: 1003.40, humi:  39.00, alti:  82.20
+Sense HAT tph data................................: temp:  35.15, pres: 1008.22, humi:  38.09
+Average of ext tph sensor and sense hat tph sensor: temp:  32.77, pres: 1005.81, humi:  38.55
+
+
+
+ext tph sensor data...............................: temp:  30.40, pres: 1003.20, humi:  39.10, alti:  84.10
+Sense HAT tph data................................: temp:  35.69, pres: 1008.01, humi:  37.90
+Average of ext tph sensor and sense hat tph sensor: temp:  33.05, pres: 1005.61, humi:  38.50
+-------------------------------------------------------------------------------------                      
+
+
+
+ext tph sensor data...............................: temp:  30.40, pres: 1003.20, humi:  38.90, alti:  84.30
+Sense HAT tph data................................: temp:  35.54, pres: 1007.97, humi:  38.06
+Average of ext tph sensor and sense hat tph sensor: temp:  32.97, pres: 1005.59, humi:  38.48
+-----------------------------------------------------------------------------------------------------------
+
+After some text change:
+
+ext mqtt tph sensor data..........................: temp:  30.10, pres: 1002.80, humi:  40.00, alti:  87.70
+Sense HAT tph data................................: temp:  34.38, pres: 1007.51, humi:  39.83
+Average of ext tph sensor and sense hat tph sensor: temp:  32.24, pres: 1005.15, humi:  39.91
+-----------------------------------------------------------------------------------------------------------
+
+After some changes (most important: in function conv_to_dtStr() time.gmtime(uxTime) in stead of time.localtime(uxTime))
+
+(env) paulsk@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
+file: "sys_broker.json" has been reset.
+global(): we are using the Raspberry Pi sense Hat
+topic0 = sensors/Feath/ambient
+topic1 = lights/Feath/toggle
+topic2 = lights/Feath/color_inc
+topic3 = lights/Feath/color_dec
+topic4 = $SYS/broker/clients/connected
+topic5 = $SYS/broker/clients/disconnected
+main(): Connecting to WiFi...
+Connected to network through 'eth0'. IP: 192.168.1.140
+setup(): Connecting to MQTT local broker on port 1883
+setup(): Not deleting log files, flag: "delete_logs" = False
+setup(): Successfully connected to MQTT broker.
+setup(): Subscribed to topic: "sensors/Feath/ambient"
+setup(): Subscribed to topic: "lights/Feath/toggle"
+setup(): Subscribed to topic: "lights/Feath/color_inc"
+setup(): Subscribed to topic: "lights/Feath/color_dec"
+setup(): Subscribed to topic: "$SYS/broker/clients/connected"
+setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
+Network OK
+MQTT OK
+Waiting for Messages...
+-----------------------------------------------------------------------------------------------------------
+Connected to broker 192.168.1.114 with result code: 'Success'
+Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 5 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 6 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 7 [ReasonCode(Suback, 'Granted QoS 0')]
+mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
+Network OK
+MQTT OK
+MQTT  17:41:09
+Feather PC-Lab BME280
+msgID: 1753724469
+Temperature: 30.7 °C
+Pressure: 1002.3 mB
+Altitude:  91.7 m
+Humidity:  38.0 %
+ext mqtt tph sensor data..........................: temp:  30.70, pres: 1002.30, humi:  38.00, alti:  91.70
+Sense HAT tph data................................: temp:  35.31, pres: 1007.10, humi:  37.79
+Average of ext tph sensor and sense hat tph sensor: temp:  33.01, pres: 1004.70, humi:  37.89
+-----------------------------------------------------------------------------------------------------------
+After adding global variable: use_average 
+and adding to secrets.json a new key 'tph_values' and subkey 'average'.
+Then in global():  
+use_average = True if secrets['tph_values']['average'] 
+print(TAG+f"using {avg_t} tph values")
+
+Now the output is:
+
+
+(env) paulsk@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
+file: "sys_broker.json" has been reset.
+global(): we are using the Raspberry Pi sense Hat
+global(): using average tph values                           <<<=== new line
+topic0 = sensors/Feath/ambient
+topic1 = lights/Feath/toggle
+topic2 = lights/Feath/color_inc
+topic3 = lights/Feath/color_dec
+topic4 = $SYS/broker/clients/connected
+topic5 = $SYS/broker/clients/disconnected
+main(): Connecting to WiFi...
+Connected to network through 'eth0'. IP: 192.168.1.140
+setup(): Connecting to MQTT local broker on port 1883
+setup(): Not deleting log files, flag: "delete_logs" = False
+setup(): Successfully connected to MQTT broker.
+setup(): Subscribed to topic: "sensors/Feath/ambient"
+setup(): Subscribed to topic: "lights/Feath/toggle"
+setup(): Subscribed to topic: "lights/Feath/color_inc"
+setup(): Subscribed to topic: "lights/Feath/color_dec"
+setup(): Subscribed to topic: "$SYS/broker/clients/connected"
+setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
+Network OK
+MQTT OK
+Waiting for Messages...
+-----------------------------------------------------------------------------------------------------------
+Connected to broker 192.168.1.114 with result code: 'Success'
+Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 5 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 6 [ReasonCode(Suback, 'Granted QoS 0')]
+Subscribed: 7 [ReasonCode(Suback, 'Granted QoS 0')]
+mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
+Network OK
+MQTT OK
+MQTT  21:52:16
+Feather PC-Lab BME280
+msgID: 1753739536
+Temperature: 30.3 °C
+Pressure: 1002.2 mB
+Altitude:  92.2 m
+Humidity:  37.9 %
+ext mqtt tph sensor data..........................: temp:  30.30, pres: 1002.20, humi:  37.90, alti:  92.20
+Sense HAT tph data................................: temp:  34.40, pres: 1006.96, humi:  38.61
+Average of ext tph sensor and sense hat tph sensor: temp:  32.35, pres: 1004.58, humi:  38.25
+

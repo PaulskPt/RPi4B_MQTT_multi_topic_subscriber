@@ -1,0 +1,564 @@
+---Log created on: 2025-07-27T00:17:13---
+
+ 2025-07-27T00:27:28 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:28:41 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:34:25 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:34:25 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T00:37:11 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:37:11 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T00:38:44 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:38:44 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T00:52:57 WiFi connected to: Vodafone-8D96F1
+ 2025-07-27T00:52:57 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T00:53:14 Session interrupted by user — logging and exiting.
+ 2025-07-27T01:49:46 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T01:52:55 connected to network. ip = 192.168.1.140
+ 2025-07-27T01:52:55 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T01:56:37 connected to network. ip = 192.168.1.140
+ 2025-07-27T01:56:37 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T01:57:19 Session interrupted by user — logging and exiting.
+ 2025-07-27T02:12:44 connected to network. ip = 192.168.1.140
+ 2025-07-27T02:12:44 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T02:19:09 Session interrupted by user — logging and exiting.
+ 2025-07-27T02:19:17 connected to network. ip = 192.168.1.140
+ 2025-07-27T02:19:17 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T02:19:17 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T02:19:17 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T02:19:17 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T02:19:17 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T02:19:17 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T02:19:17 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T02:25:33 Session interrupted by user — logging and exiting.
+ 2025-07-27T02:25:44 connected to network. ip = 192.168.1.140
+ 2025-07-27T02:25:44 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T02:25:44 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T02:25:44 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T02:25:44 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T02:25:44 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T02:25:44 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T02:25:44 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T02:26:03 Session interrupted by user — logging and exiting.
+ 2025-07-27T02:27:53 connected to network. ip = 192.168.1.140
+ 2025-07-27T02:27:53 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T02:27:53 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T02:27:53 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T02:27:53 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T02:27:53 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T02:27:53 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T02:27:53 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T02:28:01 Session interrupted by user — logging and exiting.
+ 2025-07-27T02:28:14 connected to network. ip = 192.168.1.140
+ 2025-07-27T02:28:14 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T02:28:14 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T02:28:14 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T02:28:14 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T02:28:14 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T02:28:14 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T02:28:14 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T02:29:23 Session interrupted by user — logging and exiting.
+ 2025-07-27T10:09:41 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:09:41 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:09:41 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:09:41 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:09:41 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:09:41 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:09:41 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:09:41 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:10:55 Session interrupted by user — logging and exiting.
+ 2025-07-27T10:19:15 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:19:15 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:19:15 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:19:15 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:19:15 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:19:15 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:19:15 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:19:15 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:23:54 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:23:54 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:23:54 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:23:54 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:23:54 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:23:54 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:23:54 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:23:54 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:27:24 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:27:24 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:27:24 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:27:24 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:27:24 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:27:24 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:27:24 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:27:24 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:29:34 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:29:34 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:29:34 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:29:34 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:29:34 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:29:34 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:29:34 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:29:34 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:32:32 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:32:32 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:32:32 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:32:32 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:32:32 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:32:32 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:32:32 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:32:32 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:35:50 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:35:50 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:35:50 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:35:50 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:35:50 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:35:50 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:35:50 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:35:50 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:39:06 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:39:06 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:39:06 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:39:06 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:39:06 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:39:06 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:39:06 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:39:06 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:44:14 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:44:14 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:44:14 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:44:14 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:44:14 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:44:14 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:44:14 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:44:14 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:45:56 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:45:56 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:45:56 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:45:56 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:45:56 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:45:56 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:45:56 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:45:56 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:46:47 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:46:47 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:46:47 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:46:47 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:46:47 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:46:47 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:46:47 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:46:47 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T10:52:40 connected to network. ip = 192.168.1.140
+ 2025-07-27T10:52:40 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T10:52:40 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T10:52:40 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T10:52:40 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T10:52:40 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T10:52:40 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T10:52:40 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T11:01:35 connected to network. ip = 192.168.1.140
+ 2025-07-27T11:01:35 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T11:01:35 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T11:01:35 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T11:01:35 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T11:01:35 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T11:01:35 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T11:01:35 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T11:02:42 connected to network. ip = 192.168.1.140
+ 2025-07-27T11:02:42 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T11:02:42 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T11:02:42 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T11:02:42 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T11:02:42 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T11:02:42 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T11:02:42 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:30:40 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:30:40 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:30:40 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:30:40 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:30:40 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:30:40 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:30:40 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:30:40 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:32:29 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:32:29 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:32:29 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:32:29 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:32:29 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:32:29 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:32:29 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:32:29 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:39:05 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:39:05 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:39:05 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:39:05 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:39:05 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:39:05 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:39:05 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:39:05 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:40:25 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:40:25 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:40:25 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:40:25 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:40:25 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:40:25 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:40:25 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:40:25 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:41:49 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:41:49 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:41:49 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:41:49 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:41:49 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:41:49 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:41:49 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:41:49 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T15:45:28 connected to network. ip = 192.168.1.140
+ 2025-07-27T15:45:28 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T15:45:28 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T15:45:28 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T15:45:28 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T15:45:28 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T15:45:28 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T15:45:28 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:07:40 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:07:40 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:07:40 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:07:40 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:07:40 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:07:40 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:07:40 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:07:40 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:10:44 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:10:56 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:10:56 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:10:56 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:10:56 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:10:56 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:10:56 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:10:56 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:10:56 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:19:51 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:19:51 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:19:51 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:19:51 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:19:51 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:19:51 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:19:51 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:19:51 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:22:51 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:22:51 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:22:51 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:22:51 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:22:51 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:22:51 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:22:51 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:22:51 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:25:09 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:25:09 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:25:09 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:25:09 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:25:09 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:25:09 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:25:09 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:25:09 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:28:21 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:28:21 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:28:21 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:28:21 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:28:21 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:28:21 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:28:21 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:28:21 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:32:12 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:32:12 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:32:12 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:32:12 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:32:12 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:32:12 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:32:12 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:32:12 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:35:23 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:39:21 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:39:21 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:39:21 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:39:21 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:39:21 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:39:21 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:39:21 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:39:21 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:43:12 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:43:19 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:43:19 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:43:19 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:43:19 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:43:19 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:43:19 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:43:19 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:43:19 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:47:50 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:47:57 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:47:57 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:47:57 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:47:57 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:47:57 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:47:57 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:47:57 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:47:57 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:50:05 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:50:13 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:50:13 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:50:13 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:50:13 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:50:13 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:50:13 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:50:13 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:50:13 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:50:52 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:50:58 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:50:58 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:50:58 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:50:58 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:50:58 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:50:58 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:50:58 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:50:58 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:53:43 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:53:49 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:53:49 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:53:49 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:53:49 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:53:49 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:53:49 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:53:49 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:53:49 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:54:47 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:54:52 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:54:52 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:54:52 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:54:52 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:54:52 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:54:52 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:54:52 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:54:52 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T16:57:05 Session interrupted by user — logging and exiting.
+ 2025-07-27T16:57:12 connected to network. ip = 192.168.1.140
+ 2025-07-27T16:57:12 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T16:57:12 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T16:57:12 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T16:57:12 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T16:57:12 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T16:57:12 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T16:57:12 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:01:10 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:01:23 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:01:23 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:01:23 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:01:23 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:01:23 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:01:23 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:01:23 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:01:23 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:04:07 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:04:13 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:04:13 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:04:13 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:04:13 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:04:13 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:04:13 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:04:13 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:04:13 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:07:42 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:07:48 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:07:48 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:07:48 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:07:48 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:07:48 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:07:48 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:07:48 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:07:48 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:13:40 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:13:46 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:13:46 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:13:46 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:13:46 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:13:46 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:13:46 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:13:46 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:13:46 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:15:44 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:15:49 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:15:49 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:15:49 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:15:49 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:15:49 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:15:49 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:15:49 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:15:49 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:18:03 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:18:09 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:18:09 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:18:09 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:18:09 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:18:09 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:18:09 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:18:09 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:18:09 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:21:45 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:24:02 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:24:02 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:24:02 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:24:02 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:24:02 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:24:02 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:24:02 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:24:02 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:25:38 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:25:46 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:25:46 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:25:46 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:25:46 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:25:46 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:25:46 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:25:46 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:25:46 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:32:55 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:33:13 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:33:13 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:33:13 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:33:13 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:33:13 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:33:13 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:33:13 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:33:13 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:39:30 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:39:33 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:39:33 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:39:33 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:39:33 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:39:33 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:39:33 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:39:33 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:39:33 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:39:36 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:39:42 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:39:42 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:39:42 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:39:42 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:39:42 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:39:42 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:39:42 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:39:42 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:51:09 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:51:15 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:51:15 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:51:15 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:51:15 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:51:15 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:51:15 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:51:15 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:51:15 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:52:16 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:52:24 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:52:24 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:52:24 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:52:24 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:52:24 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:52:24 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:52:24 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:52:24 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:54:17 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:54:21 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:54:21 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:54:21 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:54:21 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:54:21 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:54:21 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:54:21 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:54:21 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T17:59:06 Session interrupted by user — logging and exiting.
+ 2025-07-27T17:59:11 connected to network. ip = 192.168.1.140
+ 2025-07-27T17:59:11 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T17:59:11 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T17:59:11 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T17:59:11 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T17:59:11 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T17:59:11 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T17:59:11 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:04:19 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:04:24 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:04:24 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:04:24 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:04:24 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:04:24 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:04:24 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:04:24 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:04:24 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:29:26 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:29:30 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:29:30 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:29:30 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:29:30 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:29:30 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:29:30 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:29:30 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:29:30 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:34:11 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:34:17 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:34:17 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:34:17 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:34:17 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:34:17 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:34:17 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:34:17 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:34:17 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:38:22 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:38:27 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:38:27 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:38:27 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:38:27 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:38:27 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:38:27 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:38:27 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:38:27 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:41:40 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:41:48 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:41:48 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:41:48 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:41:48 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:41:48 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:41:48 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:41:48 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:41:48 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:55:47 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:55:51 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:55:51 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:55:51 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:55:51 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:55:51 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:55:51 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:55:51 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:55:51 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T18:57:35 Session interrupted by user — logging and exiting.
+ 2025-07-27T18:57:39 connected to network. ip = 192.168.1.140
+ 2025-07-27T18:57:39 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T18:57:39 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T18:57:39 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T18:57:39 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T18:57:39 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T18:57:39 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T18:57:39 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T19:06:18 Session interrupted by user — logging and exiting.
+ 2025-07-27T19:06:25 connected to network. ip = 192.168.1.140
+ 2025-07-27T19:06:25 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T19:06:25 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T19:06:25 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T19:06:25 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T19:06:25 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T19:06:25 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T19:06:25 Subscribed to topic: $SYS/broker/clients/disconnected
+ 2025-07-27T19:08:39 Session interrupted by user — logging and exiting.
+ 2025-07-27T19:08:44 connected to network. ip = 192.168.1.140
+ 2025-07-27T19:08:44 Connected to MQTT broker: 192.168.1.114
+ 2025-07-27T19:08:44 Subscribed to topic: sensors/Feath/ambient
+ 2025-07-27T19:08:44 Subscribed to topic: lights/Feath/toggle
+ 2025-07-27T19:08:44 Subscribed to topic: lights/Feath/color_inc
+ 2025-07-27T19:08:44 Subscribed to topic: lights/Feath/color_dec
+ 2025-07-27T19:08:44 Subscribed to topic: $SYS/broker/clients/connected
+ 2025-07-27T19:08:44 Subscribed to topic: $SYS/broker/clients/disconnected
