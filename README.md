@@ -46,7 +46,7 @@ Next step, for this subscriber device, copy the files of this repo from this sub
 ### requirements for the development platform
 You need to have installed on your Raspberry Pi: 
 - Thonny IDE, Geany or equivalent.
-- Have /boot/firmware/config.txt prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html)
+- Have file ```/boot/firmware/config.txt``` prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html)
 
 Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Then go to the home directory, activate the virtual environment venv, cd to the mqtt directory and run the Python script:
 ```
