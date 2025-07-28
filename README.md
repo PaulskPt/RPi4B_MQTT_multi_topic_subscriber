@@ -39,10 +39,10 @@ Instructions to install and setup the Raspberry Sense Hat V2 see [here](https://
 
 You need a Raspberry Pi 4 or 5 with a Raspberry Pi Sense Hat V2.
 
-You need to install a venv in folder /home/<user>/env.
+You need to install a venv in folder ```/home/<user>/env```.
 
 
-Next step, for this subscriber device, copy the files of this repo from these subfolders [here](https://github.com/PaulskPt/RPi4B_MQTT_multi_topic_subscriber/tree/main/src/Subscriber) to the following  directory: 
+Next step, for this subscriber device, copy the files of this repo from this subfolder [here](https://github.com/PaulskPt/RPi4B_MQTT_multi_topic_subscriber/tree/main/src/Subscriber) to the following  directory: 
 ```
 /home/<User>/env/mqtt
 ```
@@ -50,9 +50,9 @@ Next step, for this subscriber device, copy the files of this repo from these su
 ### requirements for the development platform
 You need to have installed on your Raspberry Pi: 
 - Thonny IDE, Geany or equivalent.
-- Have /boot/firmware/config.txt prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation of Raspberry Pi
+- Have /boot/firmware/config.txt prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html)
 
-Before to start the Python script mqtt_rpi4b.py you need to start a terminal session. Then go to the home directory, activate the virtual environment venv, cd to the mqtt directory and run the Python script:
+Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Then go to the home directory, activate the virtual environment venv, cd to the mqtt directory and run the Python script:
 ```
 	cd ~/
 	source env/bin/activate
@@ -60,18 +60,7 @@ Before to start the Python script mqtt_rpi4b.py you need to start a terminal ses
 	python3 mqtt_rpi4b.py
 ```
 
-As soon as the Python script runs there will appear a first screen:
-```
-	mqtt
-	waiting for
-	messages...
-
-	wi-fi OK
-	mqtt OK
-```
-As soon as the RPi4B has received the first MQTT message, a new screen will appear.
-If you run
-In the Terminal window will appear info about the received message, like this:
+As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
 ```
 
 (env) paulsk@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
@@ -181,7 +170,7 @@ The "publisher_id" and "subscriber_id" are also defined in the file "secrets.jso
 	280 PUBLISHER_ID = secrets['mqtt']['publisher_id']
 
 ```
-This Python script will start logging in the current working directory. Log filenames contain a date and time. When the logfile becomes of a certain file length, a new logfile will be created. Another file, name: "mqtt_latest_log_fn.txt" will contain the filename of the current logfile. At the moment you force the running script to stop, by issuing the key-combo "<Ctrl+C>", this will provoke a KeyboardInterrupt. In this case the contents of the current logfile will be printed to the Thonny Shell window (serial output). In principle, the logfile(s) created will not be deleted by the Python script, leaving you the opportunity to copy them to another device or just read them once again. If you want old logfile(s) to be deleted automatically, set the following boolean flag to True: 
+This Python script will start logging in the current working directory. Log filenames contain a date and time. When the logfile becomes of a certain file length, a new logfile will be created. Another file, name: "mqtt_latest_log_fn.txt" will contain the filename of the current logfile. At the moment you force the running script to stop, by issuing the key-combo "<Ctrl+C>", this will provoke a KeyboardInterrupt. In this case the contents of the current logfile will be printed to the Terminal window. In principle, the logfile(s) created will not be deleted by the Python script, leaving you the opportunity to copy them to another device or just read them once again. If you want old logfile(s) to be deleted automatically, set the following boolean flag to True: 
 ```
 	97 delete_logs = False
 ```
@@ -248,11 +237,11 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
   }
 }
 ```
-Note: in principle we use an Ethernet connection, however you can chose for a WiFi connection. In case of a WiFi connection,
+Note: under the key "mqtt", subkey "broker_local" fill-in the IP-address of your local broker device. Under "hardware" subkey "network_interface" default is set for an ethernet (wired) connection, however you can chose for a WiFi connection. In case of a WiFi connection,
 fill-in the WiFi SSID and the WiFi Password, then fill-in under key "hardware", subkey "network_interface" : "wlan0" instead of "eth0".
 
 A word about the key "tph_values", subkey "average". This MQTT Subscriber receives ambient sensor data (temperature, pressure, humidity) from an remote sensor through MQTT messages. The Raspberry Sense Hat V2 has also an ambient sensor.
-The Python script will print via the Serial output the sensor values from both the remote sensor and the Sense Hat sensor. Default the "average" subkey has a value of 1 which means that the average of the tph values of both remote and Sense hat sensors will be displayed on the 8x8 led matrix of the sense hat. They will also be printed via serial output in the terminal window.
+The Python script will print to the Terminal window the sensor values from both the remote sensor and the Sense Hat sensor. The "average" subkey has by default a value of 1 which means that the average of the tph values of both remote and Sense hat sensors will be displayed on the 8x8 led matrix of the sense hat. They will also be printed to the terminal window.
 
 ## File sys_broker.json
 
@@ -281,7 +270,7 @@ You will see output like this:
 sys_broker_dict written to file: "sys_broker.json"
 pr_log(): sys_broker json file not found or unable to open. Error: [Errno 2] No such file or directory: '/sys_broker.json'
 Size of log file: 29368.
-Contents of log file: "/home/paulsk/env/mqtt/mqtt_log_2025-07-27T231001.txt"
+Contents of log file: "/home/<user>/env/mqtt/mqtt_log_2025-07-27T231001.txt"
 pr_log():  01) ---Log created on: 2025-07-27T23:10:01---
 pr_log():  02)
 pr_log():  03) 2025-07-27T23:14:15 connected to network. ip = 192.168._.___
@@ -313,14 +302,11 @@ then you will see:
 
 ```
 
-# Adafruit Gamepad QT
-
-For more info see the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main)
-
 # Hardware used
 
 - A Raspberry Pi 4B-4GB [info](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 - A Raspberry Pi Sense Hat V2 [info](https://www.raspberrypi.com/products/sense-hat/)
+- For the other hardware: Publisher device, Broker device, RTC unit, Gamepad QT, multi-sensor-stick and 3-port Grove Hub, see [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main<)
 
 # Known problems
 
