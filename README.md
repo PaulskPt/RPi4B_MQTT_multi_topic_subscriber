@@ -78,11 +78,8 @@ file: "sys_broker.json" has been reset.
 global(): we are using the Raspberry Pi sense Hat
 global(): using average tph values
 topic0 = sensors/Feath/ambient
-topic1 = lights/Feath/toggle
-topic2 = lights/Feath/color_inc
-topic3 = lights/Feath/color_dec
-topic4 = $SYS/broker/clients/connected
-topic5 = $SYS/broker/clients/disconnected
+topic1 = $SYS/broker/clients/connected
+topic2 = $SYS/broker/clients/disconnected
 Connected to network through 'eth0'. IP: 192.168._.___
 setup(): Connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
