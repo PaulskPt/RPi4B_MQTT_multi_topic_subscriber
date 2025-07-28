@@ -29,19 +29,6 @@ For a successful MQTT communication you need:
 For info on howto install software on the Publisher device and more info about the used Broker device see [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main)
 
 Instructions to install and setup the Raspberry Sense Hat V2 see [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html).
-Especial pay attention to these steps:
-```
-Before you can read and write EEPROM data to and from the Sense HAT, you must complete the following steps:
-
-Enable I2C0 and I2C1 by adding the following line to the /boot/firmware/config.txt file:
-
-dtparam=i2c_vc=on
-dtparam=i2c_arm=on
-Run the following command to reboot:
-
-sudo reboot
-
-```
 
 ### for the Subscriber device
 
@@ -59,15 +46,29 @@ Next step, for this subscriber device, copy the files of this repo from this sub
 ### requirements for the development platform
 You need to have installed on your Raspberry Pi: 
 - Thonny IDE, Geany or equivalent.
-- Have file ```/boot/firmware/config.txt``` prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html)
+- Have file ```/boot/firmware/config.txt``` prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html). 
+  Especial pay attention to these steps:
+```
+Before you can read and write EEPROM data to and from the Sense HAT, you must complete the following steps:
 
-Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Then go to the home directory, activate the virtual environment venv, cd to the mqtt directory and run the Python script:
+Enable I2C0 and I2C1 by adding the following line to the /boot/firmware/config.txt file:
+
+dtparam=i2c_vc=on
+dtparam=i2c_arm=on
+Run the following command to reboot:
+
+sudo reboot
+
+```
+
+Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Activate the virtual environment (venv), cd to the ```mqtt``` directory and run the Python script:
 ```
 	cd ~/
 	source env/bin/activate
 	cd env/mqtt
 	python3 mqtt_rpi4b.py
 ```
+If the Python interpreter reports errors that it cannot find certain module(s), install them from within the directory ```/home/<user>/env```, using ```pip3 install <module name>```
 
 As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
 ```
