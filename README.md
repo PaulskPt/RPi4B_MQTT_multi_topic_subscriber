@@ -12,7 +12,7 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 - Using ambient data: temperatrue, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
 
 ## MQTT messages come by "topics".
-### This repo works with four different topics for the Publisher device and six topics for the Subscriber device:
+### This repo works with four different topics for the Publisher device and three topics for this Subscriber device:
 - "sensor/Feath/ambient". Containing ambient data from a remote sensor
 - "$SYS/broker/clients/disconnected". Subscriber device only. 
 - "$SYS/broker/clients/connected". Subscriber device only.
@@ -34,7 +34,8 @@ Instructions to install and setup the Raspberry Sense Hat V2 see [here](https://
 
 You need a Raspberry Pi 4 or 5 with a Raspberry Pi Sense Hat V2.
 
-You need to install a venv in folder ```/home/<user>/env```.
+You need to create a directory ```/home/<user>/env```. Then install a virtual environment in that folder. Do not name the directory (as in the instructions) ```.env```.
+Instructions how to create a virtual environment on a Raspberry Pi see [here](https://forums.raspberrypi.com/viewtopic.php?t=367685)
 
 
 Next step, for this subscriber device, copy the files of this repo from this subfolder [here](https://github.com/PaulskPt/RPi4B_MQTT_multi_topic_subscriber/tree/main/src/subscriber) to the following  directory: 
@@ -45,15 +46,29 @@ Next step, for this subscriber device, copy the files of this repo from this sub
 ### requirements for the development platform
 You need to have installed on your Raspberry Pi: 
 - Thonny IDE, Geany or equivalent.
-- Have /boot/firmware/config.txt prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html)
+- Have file ```/boot/firmware/config.txt``` prepared for use of the Raspberry Sense Hat V2 as instructed in the documentation [here](https://www.raspberrypi.com/documentation/accessories/sense-hat.html). 
+  Especial pay attention to these steps:
+```
+Before you can read and write EEPROM data to and from the Sense HAT, you must complete the following steps:
 
-Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Then go to the home directory, activate the virtual environment venv, cd to the mqtt directory and run the Python script:
+Enable I2C0 and I2C1 by adding the following line to the /boot/firmware/config.txt file:
+
+dtparam=i2c_vc=on
+dtparam=i2c_arm=on
+Run the following command to reboot:
+
+sudo reboot
+
+```
+
+Before to start the Python script ```mqtt_rpi4b.py``` you need to start a terminal session. Activate the virtual environment (venv), cd to the ```mqtt``` directory and run the Python script:
 ```
 	cd ~/
 	source env/bin/activate
 	cd env/mqtt
 	python3 mqtt_rpi4b.py
 ```
+If the Python interpreter reports errors that it cannot find certain module(s), install them from within the directory ```/home/<user>/env```, using ```pip3 install <module name>``` while the virtual environment is active.
 
 As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
 ```
@@ -63,33 +78,24 @@ file: "sys_broker.json" has been reset.
 global(): we are using the Raspberry Pi sense Hat
 global(): using average tph values
 topic0 = sensors/Feath/ambient
-topic1 = lights/Feath/toggle
-topic2 = lights/Feath/color_inc
-topic3 = lights/Feath/color_dec
-topic4 = $SYS/broker/clients/connected
-topic5 = $SYS/broker/clients/disconnected
+topic1 = $SYS/broker/clients/connected
+topic2 = $SYS/broker/clients/disconnected
 Connected to network through 'eth0'. IP: 192.168._.___
 setup(): Connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
 setup(): Successfully connected to MQTT broker.
 setup(): Subscribed to topic: "sensors/Feath/ambient"
-setup(): Subscribed to topic: "lights/Feath/toggle"
-setup(): Subscribed to topic: "lights/Feath/color_inc"
-setup(): Subscribed to topic: "lights/Feath/color_dec"
 setup(): Subscribed to topic: "$SYS/broker/clients/connected"
 setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
 Network OK
 MQTT OK
 Waiting for Messages...
 -----------------------------------------------------------------------------------------------------------
-Connected to broker 192.168.1.114 with result code: 'Success'
+Connected to broker 192.168._.___ with result code: 'Success'
 Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 5 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 6 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 7 [ReasonCode(Suback, 'Granted QoS 0')]
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
 Network OK
 MQTT OK
@@ -116,19 +122,17 @@ ext mqtt tph sensor data..........................: temp:  30.30, pres: 1002.20,
 Sense HAT tph data................................: temp:  34.57, pres: 1006.92, humi:  38.63
 Average of ext tph sensor and sense hat tph sensor: temp:  32.44, pres: 1004.56, humi:  38.31
 -----------------------------------------------------------------------------------------------------------
-[...]
+[...] or after the gotosleep time moment:
 rotate_log_if_needed(): size of "mqtt_log_2025-07-27T231001.txt" is: 29294 bytes. Max size is: 51200 bytes.
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
-MQTT  21:58:16
+MQTT  00:41:16
 Feather PC-Lab BME280
-msgID: 1753739896
-Temperature: 30.2 °C
-Pressure: 1002.2 mB
-Altitude:  92.7 m
-Humidity:  38.1 %
-ext mqtt tph sensor data..........................: temp:  30.20, pres: 1002.20, humi:  38.10, alti:  92.70
-Sense HAT tph data................................: temp:  34.45, pres: 1006.88, humi:  38.68
-Average of ext tph sensor and sense hat tph sensor: temp:  32.33, pres: 1004.54, humi:  38.39
+msgID: 1753749676
+Temperature: 30.6 °C
+Pressure: 1001.9 mB
+Altitude:  94.9 m
+Humidity:  38.6 %
+draw(): it is night. We're not showing data on the LED matrix of the sense hat
 -----------------------------------------------------------------------------------------------------------
 [...]
 ```
