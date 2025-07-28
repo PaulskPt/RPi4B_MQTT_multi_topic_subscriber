@@ -94,7 +94,6 @@ BACKGROUND = (255, 250, 240)
 
 my_debug = False
 lStart = True
-delete_logs = False
 msg_rcvd = False
 mqtt_connected = False # Flag to indicate if the MQTT client is connected   
 
@@ -238,6 +237,8 @@ if use_sense_hat:
 use_average = True if secrets['tph_values']['average'] == 1 else False
 avg_t = "average" if use_average == True else "mqtt"
 print(TAG+f"using {avg_t} tph values")
+
+delete_logs = True if secrets['logging']['delete_logs'] == 1 else False
 
 if my_debug:
     print(f"global(): type(use_sense_hat) = {type(use_sense_hat)}, use_sense_hat = {use_sense_hat}")
