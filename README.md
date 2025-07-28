@@ -34,7 +34,8 @@ Instructions to install and setup the Raspberry Sense Hat V2 see [here](https://
 
 You need a Raspberry Pi 4 or 5 with a Raspberry Pi Sense Hat V2.
 
-You need to install a venv in folder ```/home/<user>/env```.
+You need to create a directory ```/home/<user>/env. Then install a virtual environment in that folder. Do not name the directory (as in the instructions) ```.env```.
+Instructions how to create a virtual environment on a Raspberry Pi see [here](https://forums.raspberrypi.com/viewtopic.php?t=367685)
 
 
 Next step, for this subscriber device, copy the files of this repo from this subfolder [here](https://github.com/PaulskPt/RPi4B_MQTT_multi_topic_subscriber/tree/main/src/subscriber) to the following  directory: 
