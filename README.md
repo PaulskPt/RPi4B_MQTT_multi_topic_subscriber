@@ -168,9 +168,9 @@ The "publisher_id" and "subscriber_id" are also defined in the file "secrets.jso
 	280 PUBLISHER_ID = secrets['mqtt']['publisher_id']
 
 ```
-This Python script will start logging in the current working directory. Log filenames contain a date and time. When the logfile becomes of a certain file length, a new logfile will be created. Another file, name: "mqtt_latest_log_fn.txt" will contain the filename of the current logfile. At the moment you force the running script to stop, by issuing the key-combo "<Ctrl+C>", this will provoke a KeyboardInterrupt. In this case the contents of the current logfile will be printed to the Terminal window. In principle, the logfile(s) created will not be deleted by the Python script, leaving you the opportunity to copy them to another device or just read them once again. If you want old logfile(s) to be deleted automatically, set the following boolean flag to True: 
+This Python script will start logging in the current working directory. Log filenames contain a date and time. When the logfile becomes of a certain file length, a new logfile will be created. Another file, name: "mqtt_latest_log_fn.txt" will contain the filename of the current logfile. At the moment you force the running script to stop, by issuing the key-combo "<Ctrl+C>", this will provoke a KeyboardInterrupt. In this case the contents of the current logfile will be printed to the Terminal window. In principle, the logfile(s) created will not be deleted by the Python script, leaving you the opportunity to copy them to another device or just read them once again. If you want old logfile(s) to be deleted automatically, change the setting in file ```secrets.json```. The script uses that setting in the following line: 
 ```
-	97 delete_logs = False
+	241 delete_logs = True if secrets['logging']['delete_logs'] == 1 else False
 ```
 Beside these type of logfiles there exists also an "err.log" file.
 
