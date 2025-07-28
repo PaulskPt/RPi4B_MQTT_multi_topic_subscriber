@@ -68,7 +68,7 @@ Before to start the Python script ```mqtt_rpi4b.py``` you need to start a termin
 	cd env/mqtt
 	python3 mqtt_rpi4b.py
 ```
-If the Python interpreter reports errors that it cannot find certain module(s), install them from within the directory ```/home/<user>/env```, using ```pip3 install <module name>```
+If the Python interpreter reports errors that it cannot find certain module(s), install them from within the directory ```/home/<user>/env```, using ```pip3 install <module name>``` while the virtual environment is active.
 
 As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
 ```
