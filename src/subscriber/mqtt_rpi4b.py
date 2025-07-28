@@ -720,18 +720,22 @@ MESSAGE_DISPLAY_DURATION = 20  # Duration to display each message in seconds
 # WiFi setup
 
 # Eventually (if needed)
-ssid = secrets['wifi']['ssid']
-
-password = secrets['wifi']['pass']
-
-print(TAG+"Connecting to WiFi...")
-
-#if not is_connected_to_wifi():
-#    interface = 'wlan0'
-#    os.system('iwconfig ' + interface + ' essid ' + ssid + ' key ' + password)
-if have_ip(True):
-    t = "connected to network. ip = {}".format(ip)
-    add_to_log(t)
+if interface == 'wlan0':
+    ssid = secrets['wifi']['ssid']
+    password = secrets['wifi']['pass']
+    print(TAG+"Connecting to WiFi...")
+elif interface == 'eth0':
+    ssid = ""
+    password = ""
+    #if not is_connected_to_wifi():
+    #    interface = 'wlan0'
+    #    os.system('iwconfig ' + interface + ' essid ' + ssid + ' key ' + password)
+    if have_ip(True):
+        t = "connected to network. ip = {}".format(ip)
+        add_to_log(t)
+else:
+    print("no network interface available!")
+    raise RuntimeError
 
 msg_drawn = False
 
