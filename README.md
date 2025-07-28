@@ -1,5 +1,4 @@
-# 1) Receiving and displaying ambient data;
-# 2) executing commands;
+# Receiving and displaying ambient data;
 # on a Raspberry Pi 4B-4GB
 
 by Paulus Schulinck (Github handle: @PaulskPt)
@@ -9,7 +8,6 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 ## What is it?
 - Receiving, interpreting and displaying ambient data as temperature, pressure and humidity from a remote ambient sensor,
 - Receiving $SYS topic MQTT messages,
-- executing commands from a remote control device,
 - by means of MQTT messages.
 - Using ambient data: temperatrue, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
 
