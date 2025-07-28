@@ -85,23 +85,17 @@ setup(): Connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
 setup(): Successfully connected to MQTT broker.
 setup(): Subscribed to topic: "sensors/Feath/ambient"
-setup(): Subscribed to topic: "lights/Feath/toggle"
-setup(): Subscribed to topic: "lights/Feath/color_inc"
-setup(): Subscribed to topic: "lights/Feath/color_dec"
 setup(): Subscribed to topic: "$SYS/broker/clients/connected"
 setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
 Network OK
 MQTT OK
 Waiting for Messages...
 -----------------------------------------------------------------------------------------------------------
-Connected to broker 192.168.1.114 with result code: 'Success'
+Connected to broker 192.168._.___ with result code: 'Success'
 Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
 Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 5 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 6 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 7 [ReasonCode(Suback, 'Granted QoS 0')]
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
 Network OK
 MQTT OK
@@ -128,7 +122,7 @@ ext mqtt tph sensor data..........................: temp:  30.30, pres: 1002.20,
 Sense HAT tph data................................: temp:  34.57, pres: 1006.92, humi:  38.63
 Average of ext tph sensor and sense hat tph sensor: temp:  32.44, pres: 1004.56, humi:  38.31
 -----------------------------------------------------------------------------------------------------------
-[...]
+[...] or after the gotosleep time moment:
 rotate_log_if_needed(): size of "mqtt_log_2025-07-27T231001.txt" is: 29294 bytes. Max size is: 51200 bytes.
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
 MQTT  21:58:16
@@ -138,9 +132,7 @@ Temperature: 30.2 °C
 Pressure: 1002.2 mB
 Altitude:  92.7 m
 Humidity:  38.1 %
-ext mqtt tph sensor data..........................: temp:  30.20, pres: 1002.20, humi:  38.10, alti:  92.70
-Sense HAT tph data................................: temp:  34.45, pres: 1006.88, humi:  38.68
-Average of ext tph sensor and sense hat tph sensor: temp:  32.33, pres: 1004.54, humi:  38.39
+draw(): it is night. We're not showing data on the LED matrix of the sense hat
 -----------------------------------------------------------------------------------------------------------
 [...]
 ```
