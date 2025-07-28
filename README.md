@@ -73,8 +73,7 @@ topic2 = lights/Feath/color_inc
 topic3 = lights/Feath/color_dec
 topic4 = $SYS/broker/clients/connected
 topic5 = $SYS/broker/clients/disconnected
-main(): Connecting to WiFi...
-Connected to network through 'eth0'. IP: 192.168.1.140
+Connected to network through 'eth0'. IP: 192.168._.___
 setup(): Connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
 setup(): Successfully connected to MQTT broker.
