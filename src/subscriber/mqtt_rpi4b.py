@@ -4,9 +4,8 @@
 # Version 3.0  created on 2025-07-19.
 # Includes handling MQTT messages with topics:
 #         sensors/Feath/ambient,
-#         lights/Feath/toggle,
-#         lights/Feath/color_inc and
-#         lights/Feath/color_dec
+#         $SYS/broker/clients/connected,
+#         $SYS/broker/clients/disconnected.
 # Added functions to control the 7 ambient backlight LEDs
 # by means of MQTT messages sent by a remote MQTT Publisher device.
 #
