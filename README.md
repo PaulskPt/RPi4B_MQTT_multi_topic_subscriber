@@ -210,11 +210,8 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
     "broker_external": "5.196.78.28",
     "port": "1883",
     "topic0": "sensors/Feath/ambient",
-    "topic1": "lights/Feath/toggle",
-    "topic2": "lights/Feath/color_inc",
-    "topic3": "lights/Feath/color_dec",
-    "topic4": "$SYS/broker/clients/connected",
-	"topic5": "$SYS/broker/clients/disconnected",
+    "topic1": "$SYS/broker/clients/connected",
+    "topic2": "$SYS/broker/clients/disconnected",
     "client_id":  "RPi4BMQTTClient",
     "publisher_id": "Feath"
   },
