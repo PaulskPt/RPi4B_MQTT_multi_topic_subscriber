@@ -235,7 +235,7 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
     "use_sense_hat": 1
   },
   "tph_values": {
-	  "average" : 1
+    "average" : 1
   },
   "logging": {
     "delete_logs" : 0
