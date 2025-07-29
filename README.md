@@ -309,6 +309,8 @@ then you will see:
 <user>@RPi4B:~/env/mqtt $
 
 ```
+# Video
+For a short video impression of the text scrolling on the 8x8 LED matrix of the Sense Hat [video](https://imgur.com/a/8t6FmtB)
 
 # Hardware used
 
