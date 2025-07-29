@@ -1,4 +1,4 @@
-# Receiving and displaying ambient data;
+# Receiving and displaying ambient data
 # on a Raspberry Pi 4B-4GB
 
 by Paulus Schulinck (Github handle: @PaulskPt)
