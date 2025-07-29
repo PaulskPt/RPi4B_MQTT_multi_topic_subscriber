@@ -31,7 +31,7 @@ mqttc = None
 
 # Example where to extract the IP-address:
 # if_dict[2][1]
-# {'addr': '192.168.1.140', 'netmask': '255.255.255.0', 'broadcast': '192.168.1.255'}
+# {'addr': '192.168._.___', 'netmask': '255.255.255.0', 'broadcast': '192.168.1.255'}
 def have_ip(printIt:bool = False):
     global ip
     ret = False
