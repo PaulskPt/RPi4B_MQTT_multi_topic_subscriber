@@ -189,12 +189,19 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
 	pr_log():  02) 
 	pr_log():  03) 2025-07-20T17:31:25 WiFi connected to: _____________
 	pr_log():  04) 2025-07-20T17:31:25 Connected to MQTT broker: 192.168._.___
-	pr_log():  05) 2025-07-20T17:31:26 Subscribed to topic: sensors/Feath/ambient
-	pr_log():  06) 2025-07-20T17:31:26 Subscribed to topic: lights/Feath/toggle
-	pr_log():  07) 2025-07-20T17:31:26 Subscribed to topic: lights/Feath/color_inc
-	pr_log():  08) 2025-07-20T17:31:26 Subscribed to topic: lights/Feath/color_dec
-	pr_log():  09) 2025-07-20T18:05:37 Session interrupted by user — logging and exiting.
-	[...]
+        [...]
+        pr_log():  454) 2025-07-29T00:40:26 Subscribed to topic: sensors/Feath/ambient
+        pr_log():  455) 2025-07-29T00:40:26 Subscribed to topic: $SYS/broker/clients/connected
+        pr_log():  456) 2025-07-29T00:40:26 Subscribed to topic: $SYS/broker/clients/disconnected
+        pr_log():  457) 2025-07-29T00:41:49 Session interrupted by user — logging and exiting.
+	--------------------------------------------------
+        Traceback (most recent call last):
+          File "/home/paulsk/env/mqtt/mqtt_rpi4b.py", line 1705, in <module>
+            while True:
+        KeyboardInterrupt
+
+        (env) <user>@RPi4B:~/env/mqtt $ ^C
+
 ```
 - Debug output: If you want more output to the serial output (Thonny Shell window), set the following boolean variable to True:
 ```
