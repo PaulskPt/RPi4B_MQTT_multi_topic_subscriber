@@ -314,7 +314,7 @@ then you will see:
 
 - A Raspberry Pi 4B-4GB [info](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 - A Raspberry Pi Sense Hat V2 [info](https://www.raspberrypi.com/products/sense-hat/)
-- For the other hardware: Publisher device, Broker device, RTC unit, Gamepad QT, multi-sensor-stick and 3-port Grove Hub, see [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main<)
+- For the other hardware: Publisher device, Broker device, RTC unit, Gamepad QT, multi-sensor-stick and 3-port Grove Hub, see [repo](https://github.com/PaulskPt/Presto_MQTT_multi_topic_subscriber/tree/main)
 
 # Known problems
 
