@@ -81,21 +81,21 @@ topic0 = sensors/Feath/ambient
 topic1 = $SYS/broker/clients/connected
 topic2 = $SYS/broker/clients/disconnected
 Connected to network through 'eth0'. IP: 192.168._.___
-setup(): Connecting to MQTT local broker on port 1883
+setup(): connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
-setup(): Successfully connected to MQTT broker.
-setup(): Subscribed to topic: "sensors/Feath/ambient"
-setup(): Subscribed to topic: "$SYS/broker/clients/connected"
-setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
+setup(): successfully connected to MQTT broker.
+setup(): subscribed to topic: "sensors/Feath/ambient"
+setup(): subscribed to topic: "$SYS/broker/clients/connected"
+setup(): subscribed to topic: "$SYS/broker/clients/disconnected"
 Network OK
 MQTT OK
 Waiting for Messages...
 -----------------------------------------------------------------------------------------------------------
-Connected to broker 192.168._.___ with result code: 'Success'
-Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
+on_connect(): Connected to MQTT broker 192.168._.___ with result code: 'Success'
+on_subscribe(): subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
 Network OK
 MQTT OK
