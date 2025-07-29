@@ -9,7 +9,7 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 - Receiving, interpreting and displaying ambient data as temperature, pressure and humidity from a remote ambient sensor,
 - Receiving $SYS topic MQTT messages,
 - by means of MQTT messages.
-- Using ambient data: temperatrue, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
+- Using ambient data: temperature, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
 
 ## MQTT messages come by "topics".
 ### This repo works with four different topics for the Publisher device and three topics for this Subscriber device:
