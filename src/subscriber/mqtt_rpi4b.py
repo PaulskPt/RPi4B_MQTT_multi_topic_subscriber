@@ -41,7 +41,7 @@ def have_ip(printIt:bool = False):
             if my_debug:
                 print(f"have_ip(): if_dict = {if_dict}, type(if_dict) = {type(if_dict)}")
             if 2 in if_dict:
-                this_ip = if_dict[2][1]['addr']  # e.g. 192.168.1.140
+                this_ip = if_dict[2][1]['addr']  # e.g. 192.168._.___
                 if this_ip != '0.0.0.0':
                     if this_ip != ip:
                         ip = this_ip # update global ip
