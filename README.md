@@ -96,7 +96,7 @@ on_subscribe(): subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
 on_subscribe(): subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
 on_subscribe(): subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
 on_subscribe(): subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
-mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
+mqtt_callback(): received a MQTT message on topic: "sensors/Feath/ambient"
 Network OK
 MQTT OK
 MQTT  21:52:16
@@ -106,11 +106,11 @@ Temperature: 30.3 °C
 Pressure: 1002.2 mB
 Altitude:  92.2 m
 Humidity:  37.9 %
-ext mqtt tph sensor data..........................: temp:  30.30, pres: 1002.20, humi:  37.90, alti:  92.20
+Ext MQTT tph sensor data..........................: temp:  30.30, pres: 1002.20, humi:  37.90, alti:  92.20
 Sense HAT tph data................................: temp:  34.40, pres: 1006.96, humi:  38.61
 Average of ext tph sensor and sense hat tph sensor: temp:  32.35, pres: 1004.58, humi:  38.25
 -----------------------------------------------------------------------------------------------------------
-mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
+mqtt_callback(): received a MQTT message on topic: "sensors/Feath/ambient"
 MQTT  21:53:16
 Feather PC-Lab BME280
 msgID: 1753739596
@@ -118,13 +118,13 @@ Temperature: 30.3 °C
 Pressure: 1002.2 mB
 Altitude:  92.5 m
 Humidity:  38.0 %
-ext mqtt tph sensor data..........................: temp:  30.30, pres: 1002.20, humi:  38.00, alti:  92.50
+Ext MQTT tph sensor data..........................: temp:  30.30, pres: 1002.20, humi:  38.00, alti:  92.50
 Sense HAT tph data................................: temp:  34.57, pres: 1006.92, humi:  38.63
 Average of ext tph sensor and sense hat tph sensor: temp:  32.44, pres: 1004.56, humi:  38.31
 -----------------------------------------------------------------------------------------------------------
 [...] or after the gotosleep time moment:
 rotate_log_if_needed(): size of "mqtt_log_2025-07-27T231001.txt" is: 29294 bytes. Max size is: 51200 bytes.
-mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
+mqtt_callback(): received a MQTT message on topic: "sensors/Feath/ambient"
 MQTT  06:44:17
 Feather PC-Lab BME280
 msgID: 1753771457
@@ -132,7 +132,7 @@ Temperature: 29.2 °C
 Pressure: 1002.3 mB
 Altitude:  91.6 m
 Humidity:  41.0 %
-ext mqtt tph sensor data..........................: temp:  29.20, pres: 1002.30, humi:  41.00, alti:  91.60
+Ext MQTT tph sensor data..........................: temp:  29.20, pres: 1002.30, humi:  41.00, alti:  91.60
 Sense HAT tph data................................: temp:  34.42, pres: 1006.96, humi:  39.51
 Average of ext tph sensor and sense hat tph sensor: temp:  31.81, pres: 1004.63, humi:  40.25
 draw(): it is night. We're not showing data on the LED matrix of the sense hat
