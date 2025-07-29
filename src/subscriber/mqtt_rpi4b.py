@@ -55,7 +55,8 @@ def have_ip(printIt:bool = False):
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, reason_code, properties):
-    print(f"Connected to broker {BROKER} with result code: \'{reason_code}\'")
+    TAG = "on_connect(): "
+    print(TAG+f"Connected to MQTT broker {BROKER} with result code: \'{reason_code}\'")
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe(TOPIC_LST[0]) # was: ("$SYS/#")  sensors/Feath/ambient
@@ -72,7 +73,7 @@ def on_message(client, userdata, msg):
     #mqtt_callback(topic, paho_msg)
         
 def on_subscribe(mqttc, obj, mid, reason_code_list, properties):
-    print("Subscribed: " + str(mid) + " " + str(reason_code_list))
+    print("on_subscribe(): subscribed: " + str(mid) + " " + str(reason_code_list))
 
 def on_log(mqttc, obj, level, string):
     print(string)
@@ -982,9 +983,9 @@ def mqtt_callback(topic, msg):
             """
             
             if not my_debug:
-                print(TAG+f"Received a mqtt message on topic: \"{topic}\"")
-                #print(TAG+f"Received a mqtt message on topic: \"{topic}\", timestamp: {ts}")
-                #print(TAG+f"Received a mqtt message on topic: \"{topic_rcvd}\", timestamp: {ts_corr}")
+                print(TAG+f"received a mqtt message on topic: \"{topic}\"")
+                #print(TAG+f"received a mqtt message on topic: \"{topic}\", timestamp: {ts}")
+                #print(TAG+f"received a mqtt message on topic: \"{topic_rcvd}\", timestamp: {ts_corr}")
             if my_debug:
                 print(TAG+f"msg: {msg.payload}")
         
@@ -1488,51 +1489,49 @@ def draw(mode:int = 1):
             print(f"{pres_draw}")
             print(f"{alti_draw}")
             print(f"{humi_draw}")
-            if  hh >= DISPLAY_HOUR_WAKEUP and hh < DISPLAY_HOUR_GOTOSLEEP:
-                if use_sense_hat:
-                    t = round(globT, 1)
-                    p = round(globP, 1)
-                    h = round(globH, 1)
-                    a = round(globA, 2)
-                    #if t > 18.3 and t < 26.7:
-                    txt_colour_soft_white = [64, 64, 64]
-                    bg_soft_green         = [ 0, 64,  0]
-                    bg_soft_red           = [64,  0,  0]
-                    if t > 18.3 and t < 26.9:
-                        bg = bg_soft_green  # green
-                    else:
-                        bg = bg_soft_red  # red
-                    
-                    # Displaying the scrolling text takes about 28 seconds with this scroll_speed
-                   
-                    if use_sense_hat_data:
-                        get_sensehat_data()
-                        avgT = round((t + senseHatT) / 2, 2)
-                        avgP = round((p + senseHatP) / 2, 2)
-                        avgH = round((h + senseHatH) / 2, 2)
-                        t1 = "temp: "
-                        p1 = "pres: "
-                        h1 = "humi: "
-                        ext_sensor_data_txt = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}, alti: {:6.2f}".format(t1, t, p1, p, h1, h, a)
-                        sensehat_data_txt   = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}".format(t1, senseHatT, p1, senseHatP, h1, senseHatH)
-                        avg_data_txt        = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}".format(t1, avgT, p1, avgP, h1, avgH)
-                        spc26 = 26 * "."
-                        spc32 = 32 * "."
-                        if not my_debug:
-                            print(f"ext mqtt tph sensor data{spc26}: {ext_sensor_data_txt}")
-                            print(f"Sense HAT tph data{spc32}: {sensehat_data_txt}")
-                            print(f"Average of ext tph sensor and sense hat tph sensor: {avg_data_txt}")
-                            
+            #if  hh >= DISPLAY_HOUR_WAKEUP and hh < DISPLAY_HOUR_GOTOSLEEP:
+            if use_sense_hat:
+                t = round(globT, 1)
+                p = round(globP, 1)
+                h = round(globH, 1)
+                a = round(globA, 2)
+                #if t > 18.3 and t < 26.7:
+                txt_colour_soft_white = [64, 64, 64]
+                bg_soft_green         = [ 0, 64,  0]
+                bg_soft_red           = [64,  0,  0]
+                if t > 18.3 and t < 26.9:
+                    bg = bg_soft_green  # green
+                else:
+                    bg = bg_soft_red  # red
+                
+                
+                if use_sense_hat_data:
+                    get_sensehat_data()
+                    avgT = round((t + senseHatT) / 2, 2)
+                    avgP = round((p + senseHatP) / 2, 2)
+                    avgH = round((h + senseHatH) / 2, 2)
+                    t1 = "temp: "
+                    p1 = "pres: "
+                    h1 = "humi: "
+                    ext_sensor_data_txt = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}, alti: {:6.2f}".format(t1, t, p1, p, h1, h, a)
+                    sensehat_data_txt   = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}".format(t1, senseHatT, p1, senseHatP, h1, senseHatH)
+                    avg_data_txt        = "{:s}{:6.2f}, {:s}{:7.2f}, {:s}{:6.2f}".format(t1, avgT, p1, avgP, h1, avgH)
+                    spc26 = 26 * "."
+                    spc32 = 32 * "."
+                    if not my_debug:
+                        print(f"Ext MQTT tph sensor data{spc26}: {ext_sensor_data_txt}")
+                        print(f"Sense HAT tph data{spc32}: {sensehat_data_txt}")
+                        print(f"Average of ext tph sensor and sense hat tph sensor: {avg_data_txt}")
+                if  hh >= DISPLAY_HOUR_WAKEUP and hh < DISPLAY_HOUR_GOTOSLEEP:             
                     if use_average:
                         msg = f"AVG Temp={avgT}, Pres={avgP}, Humi={avgH}"
                     else:
-                        msg = f"Temp={t}, Pres={p}, Humi={h}"    
-                
+                        msg = f"Temp={t}, Pres={p}, Humi={h}"   
+                    # Displaying the scrolling text takes about 28 seconds with this scroll_speed 
                     sense.show_message(msg, scroll_speed=0.10, text_colour = txt_colour_soft_white, back_colour=bg)
                     clr_sense_hat()
-                    
-            else:
-                print(TAG+"it is night. We\'re not showing data on the LED matrix of the sense hat")
+                else:
+                    print(TAG+"it is night. We\'re not showing data on the LED matrix of the sense hat")
         elif topic_idx == 1: # lights/Feath/toggle
             print(f"{toggle_draw1}")
             print(f"{toggle_draw2}")
@@ -1602,7 +1601,7 @@ def setup():
     #rx_bfr=1024  # ← Increase to 1024 or higher
     #print(TAG+f"Connecting to MQTT broker at {BROKER} on port {PORT}") # , recv_buffer {rx_bfr}")
     print(TAG, end='')
-    print("Connecting to MQTT ", end='')
+    print("connecting to MQTT ", end='')
     broker_typ = "local" if use_local_broker == True else "external"
     print(f"{broker_typ} broker on port {PORT}")
     
@@ -1615,35 +1614,35 @@ def setup():
         del_logfiles() # for test
     else:
         print(TAG, end='')
-        print("Not deleting log files, flag: \"delete_logs\" = ", end='')
+        print("not deleting log files, flag: \"delete_logs\" = ", end='')
         del_flg = "True" if delete_logs == True else "False"
         print(f"{del_flg}")
     try:
         # client.connect()
         mqttc.connect(BROKER, PORT, 60)
         mqtt_connected = True
-        print(TAG+f"Successfully connected to MQTT broker.") # at {BROKER}.")
-        add_to_log("Connected to MQTT broker: {}".format(BROKER))
+        print(TAG+f"successfully connected to MQTT broker") # at {BROKER}.")
+        add_to_log("connected to MQTT broker: {}".format(BROKER))
         for i in range(len(TOPIC_LST)):
             mqttc.subscribe(TOPIC_LST[i])
             #print(TAG+f"Subscribed to topic: \"{TOPIC_LST[i].decode()}\"")
-            print(TAG+f"Subscribed to topic: \"{TOPIC_LST[i]}\"")
-            #add_to_log("Subscribed to topic: {}".format(TOPIC_LST[i].decode()))
-            add_to_log("Subscribed to topic: {}".format(TOPIC_LST[i]))
+            print(TAG+f"subscribed to topic: \"{TOPIC_LST[i]}\"")
+            #add_to_log("subscribed to topic: {}".format(TOPIC_LST[i].decode()))
+            add_to_log("subscribed to topic: {}".format(TOPIC_LST[i]))
         msg_drawn = False
     
     except Exception as e:
         if e.args[0] == 113: # EHOSTUNREACH
-            t = f"Failed to reach the host with address: {BROKER} and port: {PORT}"
+            t = f"failed to reach the host with address: {BROKER} and port: {PORT}"
             print(TAG+f"{t}")
             add_to_log(t)
             mqtt_connected = False
         else:
-            print(TAG+f"Failed to connect to MQTT broker: {e}")
+            print(TAG+f"failed to connect to MQTT broker: {e}")
             mqtt_connected = False
     except KeyboardInterrupt as e:
-        print(TAG+f"KeyboardInterrupt. Exiting...\n")
-        add_to_log("Session interrupted by user — logging and exiting.")
+        print(TAG+f"keyboardInterrupt. Exiting...\n")
+        add_to_log("session interrupted by user — logging and exiting.")
         cleanup()
         pr_ref()
         pr_log()
