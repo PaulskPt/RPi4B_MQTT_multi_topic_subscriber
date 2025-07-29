@@ -1,4 +1,4 @@
-# Receiving and displaying ambient data;
+# Receiving and displaying ambient data
 # on a Raspberry Pi 4B-4GB
 
 by Paulus Schulinck (Github handle: @PaulskPt)
@@ -9,7 +9,7 @@ This is a port from the [repo](https://github.com/PaulskPt/Presto_MQTT_multi_top
 - Receiving, interpreting and displaying ambient data as temperature, pressure and humidity from a remote ambient sensor,
 - Receiving $SYS topic MQTT messages,
 - by means of MQTT messages.
-- Using ambient data: temperatrue, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
+- Using ambient data: temperature, pressure and humidity from a sensor on a Raspberry Sense Hat V2 board.
 
 ## MQTT messages come by "topics".
 ### This repo works with four different topics for the Publisher device and three topics for this Subscriber device:
@@ -70,7 +70,7 @@ Before to start the Python script ```mqtt_rpi4b.py``` you need to start a termin
 ```
 If the Python interpreter reports errors that it cannot find certain module(s), install them from within the directory ```/home/<user>/env```, using ```pip3 install <module name>``` while the virtual environment is active.
 
-As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal:
+As soon as the Python script runs and after it has setup/checked network interface communication, connection with the MQTT broker, load settings from ```secrets.json```, the following texts will be printed to the terminal. Sensor data will be displayed on the 8x8 LED matrix of the sense Hat (during daytime hours):
 ```
 
 (env) <user>@RPi4B:~/env/mqtt $ python3 mqtt_rpi4b.py
@@ -81,21 +81,21 @@ topic0 = sensors/Feath/ambient
 topic1 = $SYS/broker/clients/connected
 topic2 = $SYS/broker/clients/disconnected
 Connected to network through 'eth0'. IP: 192.168._.___
-setup(): Connecting to MQTT local broker on port 1883
+setup(): connecting to MQTT local broker on port 1883
 setup(): Not deleting log files, flag: "delete_logs" = False
-setup(): Successfully connected to MQTT broker.
-setup(): Subscribed to topic: "sensors/Feath/ambient"
-setup(): Subscribed to topic: "$SYS/broker/clients/connected"
-setup(): Subscribed to topic: "$SYS/broker/clients/disconnected"
+setup(): successfully connected to MQTT broker.
+setup(): subscribed to topic: "sensors/Feath/ambient"
+setup(): subscribed to topic: "$SYS/broker/clients/connected"
+setup(): subscribed to topic: "$SYS/broker/clients/disconnected"
 Network OK
 MQTT OK
 Waiting for Messages...
 -----------------------------------------------------------------------------------------------------------
-Connected to broker 192.168._.___ with result code: 'Success'
-Subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
-Subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
+on_connect(): Connected to MQTT broker 192.168._.___ with result code: 'Success'
+on_subscribe(): subscribed: 1 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 2 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 3 [ReasonCode(Suback, 'Granted QoS 0')]
+on_subscribe(): subscribed: 4 [ReasonCode(Suback, 'Granted QoS 0')]
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
 Network OK
 MQTT OK
@@ -125,13 +125,16 @@ Average of ext tph sensor and sense hat tph sensor: temp:  32.44, pres: 1004.56,
 [...] or after the gotosleep time moment:
 rotate_log_if_needed(): size of "mqtt_log_2025-07-27T231001.txt" is: 29294 bytes. Max size is: 51200 bytes.
 mqtt_callback(): Received a mqtt message on topic: "sensors/Feath/ambient"
-MQTT  00:41:16
+MQTT  06:44:17
 Feather PC-Lab BME280
-msgID: 1753749676
-Temperature: 30.6 °C
-Pressure: 1001.9 mB
-Altitude:  94.9 m
-Humidity:  38.6 %
+msgID: 1753771457
+Temperature: 29.2 °C
+Pressure: 1002.3 mB
+Altitude:  91.6 m
+Humidity:  41.0 %
+ext mqtt tph sensor data..........................: temp:  29.20, pres: 1002.30, humi:  41.00, alti:  91.60
+Sense HAT tph data................................: temp:  34.42, pres: 1006.96, humi:  39.51
+Average of ext tph sensor and sense hat tph sensor: temp:  31.81, pres: 1004.63, humi:  40.25
 draw(): it is night. We're not showing data on the LED matrix of the sense hat
 -----------------------------------------------------------------------------------------------------------
 [...]
