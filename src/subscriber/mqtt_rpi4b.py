@@ -2,7 +2,7 @@
 # by Andy Hudson-Smith going by @digitalurban
 # Changes by Paulus Schulinck going by @PaulskPt
 # Version 3.0  created on 2025-07-19.
-# Includes handling mqtt messages with topics:
+# Includes handling MQTT messages with topics:
 #         sensors/Feath/ambient,
 #         lights/Feath/toggle,
 #         lights/Feath/color_inc and
@@ -236,7 +236,7 @@ if use_sense_hat:
 
 # Display the average values on the 8x8 led display (see function draw())
 use_average = True if secrets['tph_values']['average'] == 1 else False
-avg_t = "average" if use_average == True else "mqtt"
+avg_t = "average" if use_average == True else "MQTT"
 print(TAG+f"using {avg_t} tph values")
 
 delete_logs = True if secrets['logging']['delete_logs'] == 1 else False
@@ -297,7 +297,7 @@ if my_debug:
 
 # Test the existance of a logfile
 log_fn = None # Note: log_fn is set in the function create_logfile()
-log_path = None # "/sd/" + log_fn
+log_path = None # "/" + log_fn
 log_size_max = 50 * 1024  # 51200 bytes # 50 kB max log file size
 log_obj = None
 log_exist = False
@@ -595,7 +595,6 @@ def rotate_log_if_needed(show: bool = False):
 TAG = "main(): "
 my_list = None 
 try:
-    # Note: os.listdir('/sd') and os.listdir('/sd/') have the same result! 
     # Check the existance of a reference file
     # in which we save the file name of the latest log file created
     if ref_file_exists():
@@ -700,7 +699,7 @@ def add_to_log(txt:str = ""):
                 try:
                     ts = timestamp()
                     with open(log_path, 'a') as log_obj:  # 'a' for append mode
-                        log_obj.write('\n '+ ts + " " + txt)  # Add received msg to file /sd/mqtt_log.txt
+                        log_obj.write('\n '+ ts + " " + txt)  # Add received msg to file /mqtt_log.txt
                     if my_debug:
                         print(TAG+f"data: \"{txt}\" appended successfully to the log file.")
                 except OSError as e:
@@ -983,9 +982,9 @@ def mqtt_callback(topic, msg):
             """
             
             if not my_debug:
-                print(TAG+f"received a mqtt message on topic: \"{topic}\"")
-                #print(TAG+f"received a mqtt message on topic: \"{topic}\", timestamp: {ts}")
-                #print(TAG+f"received a mqtt message on topic: \"{topic_rcvd}\", timestamp: {ts_corr}")
+                print(TAG+f"received a MQTT message on topic: \"{topic}\"")
+                #print(TAG+f"received a MQTT message on topic: \"{topic}\", timestamp: {ts}")
+                #print(TAG+f"received a MQTT message on topic: \"{topic_rcvd}\", timestamp: {ts_corr}")
             if my_debug:
                 print(TAG+f"msg: {msg.payload}")
         
@@ -1150,7 +1149,7 @@ def split_msg():
             if my_debug:
                 print(TAG+f"datetime = {datetime}")
         
-        lbl_k = "tm" # NOTE: this label does not exist in the mqtt message (neither doc or reads)
+        lbl_k = "tm" # NOTE: this label does not exist in the MQTT message (neither doc or reads)
         if datetime == "unknown" or datetime == datetime_empty:
             lbl_v = "--:--:--"
         else:
