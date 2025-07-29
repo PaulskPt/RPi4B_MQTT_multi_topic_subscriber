@@ -184,7 +184,7 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
 	loop(): KeyboardInterrupt: exiting...
 	
 	Size of log file: 8313. Max log file size can be: 51200 bytes.
-	Contents of log file: "/sd/mqtt_log_2025-07-20T172657.txt"
+	Contents of log file: "/mqtt_log_2025-07-20T172657.txt"
 	pr_log():  01) ---Log created on: 2025-07-20T17:26:57---
 	pr_log():  02) 
 	pr_log():  03) 2025-07-20T17:31:25 WiFi connected to: _____________
@@ -196,7 +196,7 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
         pr_log():  457) 2025-07-29T00:41:49 Session interrupted by user — logging and exiting.
 	--------------------------------------------------
         Traceback (most recent call last):
-          File "/home/paulsk/env/mqtt/mqtt_rpi4b.py", line 1705, in <module>
+          File "/home/<user>/env/mqtt/mqtt_rpi4b.py", line 1705, in <module>
             while True:
         KeyboardInterrupt
 
