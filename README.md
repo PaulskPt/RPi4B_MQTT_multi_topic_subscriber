@@ -236,6 +236,9 @@ Example of the contents of the current log showed after a KeyboardInterrupt:
   },
   "tph_values": {
 	  "average" : 1
+  },
+  "logging": {
+    "delete_logs" : 0
   }
 }
 ```
