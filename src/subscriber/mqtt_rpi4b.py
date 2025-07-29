@@ -6,8 +6,6 @@
 #         sensors/Feath/ambient,
 #         $SYS/broker/clients/connected,
 #         $SYS/broker/clients/disconnected.
-# Added functions to control the 7 ambient backlight LEDs
-# by means of MQTT messages sent by a remote MQTT Publisher device.
 #
 # Ported for use on a Raspberri Pi 4B-4GB. 
 # In case of using a Raspberry Pi 4B, printing log logs goes
